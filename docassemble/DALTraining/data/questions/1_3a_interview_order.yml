@@ -1,0 +1,11 @@
+mandatory: True
+question: |
+  Hi ${ name }! I hear you like ${ hobby }.
+---
+question: What is your favorite hobby?
+fields:
+  - no label: hobby
+---
+question: What is your name?
+fields:
+   - no label: name

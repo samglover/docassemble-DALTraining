@@ -1,0 +1,14 @@
+question: Are you a lawyer?
+fields:
+  - no label: is_lawyer
+    datatype: yesnoradio
+---
+mandatory: True
+question: |
+  % if is_lawyer:
+  What is your client's name?
+  % else:
+  What is your name?
+  % endif
+fields:
+  - no label: name

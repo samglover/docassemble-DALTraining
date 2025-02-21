@@ -1,0 +1,42 @@
+mandatory: True
+question: Let's prepare your statement
+subquestion: |
+  We'll ask for your name, the date of the incident, and a description of what happened.
+continue button field: target_variable
+---
+mandatory: True
+question: What is your name?
+fields:
+  - Enter your name: name
+---
+mandatory: True
+question: Incident date
+fields:
+  - What date did the incident happen?: birth_date
+    datatype: date
+    max: ${ today() }
+---
+mandatory: True
+question: Were you present at the time?
+fields:
+  - no label: present
+    datatype: yesnoradio
+---
+mandatory: True
+question: |
+  % if present:
+  Describe what you saw
+  % else:
+  Describe what you heard
+  % endif
+fields:
+  - no label: description
+    datatype: area
+---
+mandatory: True
+question: |
+  The incident:
+  
+  * Eyewitness: ${ name }
+  * Birth date: ${ birth_date }
+  * Favorite color: ${ favorite_color }
