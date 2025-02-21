@@ -20,6 +20,7 @@ fields:
   - Under penalty of perjury I, ${ name }, do swear and affirm the following to be true: affidavit_body
     input type: area
     rows: 20
+    label above field: True
 ---
 question: |
   Sign your affidavit
@@ -32,6 +33,23 @@ under: |
 question: Your affidavit is ready
 attachment:
   - name: ${ name }'s Affidavit
-    docx template file: affidavit_template.docx
     filename: ${ name }_affidavit
     variable name: assemble_affidavit
+    content: |
+      In re ${ name }
+      
+      **Affidavit**
+      
+      ----
+      
+      Under penalty of perjury I, ${ name }, do swear and affirm the following to be true:
+
+      ${ affidavit_body }
+
+      Signed:
+
+      ${ signature }
+      
+      ${ name }
+
+      ${ signature_date }

@@ -44,9 +44,9 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.DALTraining',
-      version='0.1.0',
+      version='1.0.0',
       description=('New interview builder training templates'),
-      long_description='# docassemble.DALTraining\n\nNew interview builder training templates\n\n## Author\n\nSam Glover, sam.glover@suffolk.edu\n\n',
+      long_description='# docassemble.DALTraining\r\n\r\nNew interview builder training templates\r\n\r\n## Author\r\n\r\nSam Glover, sam.glover@suffolk.edu\r\n\r\n',
       long_description_content_type='text/markdown',
       author='Sam Glover',
       author_email='sam.glover@suffolk.edu',
